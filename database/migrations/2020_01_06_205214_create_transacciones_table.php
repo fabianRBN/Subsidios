@@ -25,6 +25,7 @@ class CreateTransaccionesTable extends Migration
             $table->string('descripcion');
             $table->string('token');
             $table->integer('id_sucursal');
+            $table->boolean('subsidio');
         });
     }
 
