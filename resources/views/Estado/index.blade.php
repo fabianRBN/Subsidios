@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="table-container">
-          @if(count($estados) > 1 )
+          @if(count($estados) > 0 )
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
                <th>Nombre</th>
