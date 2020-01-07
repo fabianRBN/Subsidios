@@ -30,4 +30,20 @@ class ClientesController extends Controller
         return view('Cliente.create');
     }
 
+    public function get($id){
+        $cliente = Clientes::find($id);
+        return $cliente;
+    }
+
+    public function edit($id, Request $request){
+        $cliente = $this->get($id);
+        $cliente->fill($request->all())->save();
+        return $cliente;
+    }
+
+    public function delete($id){
+        $cliente = $this->get($id);
+        $cliente.delete();
+        return $cliente;
+    }
 }
