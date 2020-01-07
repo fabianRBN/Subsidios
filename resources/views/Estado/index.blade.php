@@ -25,34 +25,14 @@
                <th>Eliminar</th>
              </thead>
              <tbody>
-              @if($estados->count())  
-              @foreach($estados as $estado)  
-              <tr>
-                <td>{{$estado->titulo}}</td>
-                <td>{{$estado->descripcion}}</td>
-                
-                <!--
-                <td><a class="btn btn-primary btn-xs" href="{{action('LibroController@edit', $libro->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
-                <td>
-                  <form action="{{action('LibroController@destroy', $libro->id)}}" method="post">
-                   {{csrf_field()}}
-                   <input name="_method" type="hidden" value="DELETE">
- 
-                   <button class="btn btn-danger btn-xs" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
-                 </td>-->
-               </tr>
-               @endforeach 
-               @else
-               <tr>
-                <td colspan="8">No hay registro !!</td>
-              </tr>
-              @endif
+            
+              
             </tbody>
  
           </table>
         </div>
       </div>
-      {{ $libros->links() }}
+      
     </div>
   </div>
 </section>

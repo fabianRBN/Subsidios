@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('/estado', 'EstadoController');
+Route::get('/estado', 'EstadoController@index');
 Route::get('/create', 'EstadoController@create')->name('estado.create');
 Route::post('store', 'EstadoController@store')->name("estado.store");

@@ -15,7 +15,7 @@ class EstadoController extends Controller
     public function index()
     {
         $estados = Estado_cliente::all();
-        return view('Estado.index',compact('estados'));
+        return view('Estado.index')->with('estados',$estados);;
     }
 
     public function create()
