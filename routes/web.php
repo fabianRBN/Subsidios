@@ -14,6 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/estado', 'EstadoController@index');
-Route::get('/create', 'EstadoController@create')->name('estado.create');
-Route::post('store', 'EstadoController@store')->name("estado.store");
+//routes Estado_cliente
+Route::get('estado', 'EstadoClienteController@index')->name('estado.index');
+Route::get('/create', 'EstadoClienteController@create')->name('estado.create');
+Route::post('store', 'EstadoClienteController@store')->name('estado.store');
+Route::post('update/{id}', 'EstadoClienteController@updateEstadoCliente')->name('estado.update');
+Route::get('edit/{id}', 'EstadoClienteController@edit')->name('estado.edit');
+Route::delete('destroy/{id}', 'EstadoClienteController@destroy')->name('estado.destroy');       
+
+//routes Cliente
+Route::get('/cliente', 'ClientesController@index')->name('cliente.index');
+Route::get('/createClient', 'ClientesController@createClientView')->name('cliente.create');

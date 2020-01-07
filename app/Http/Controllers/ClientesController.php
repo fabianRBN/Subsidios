@@ -18,5 +18,16 @@ class ClientesController extends Controller
         $clientes = Clientes::Create($request->all());
         return $clientes;
     }
+    //index  cliente
+    public function index()
+    {
+        $clientes = Clientes::all();
+        return view('Cliente.index',["clientes"=>$clientes]);
+    }
+    //vista crear Cliente
+    public function createClientView()
+    {
+        return view('Cliente.create');
+    }
 
 }
