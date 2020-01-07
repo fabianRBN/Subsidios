@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Clientes;
-
+use App\Estado_cliente;
 
 class ClientesController extends Controller
 {
@@ -28,7 +28,8 @@ class ClientesController extends Controller
     //vista crear Cliente
     public function createClientView()
     {
-        return view('Cliente.create');
+        $estadoclientes = Estado_cliente::all();
+        return view('Cliente.create',["clientes"=>$estadoclientes]);
     }
 
     public function get($id){

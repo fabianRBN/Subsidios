@@ -16,11 +16,11 @@
           </div>
           
           <div class="table-container">
-          @if(count($clientes) > 1 )
+          @if(count($clientes) > 0 )
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
                <th>Nombre</th>
-               <th>Cedula</th>               
+               <th>Cédula</th>               
                <th>Editar</th>
                <th>Eliminar</th>
              </thead>
