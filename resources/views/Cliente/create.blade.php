@@ -22,7 +22,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="descripcionEstado">Apellido:</label>  
   <div class="col-md-5">
-  <input id="descripcionEstado" name="apellido" type="text" placeholder="Ingrese el apellido del cliente" class="form-control input-md">
+  <input id="apellido" name="apellido" type="text" placeholder="Ingrese el apellido del cliente" class="form-control input-md">
   </div>
 </div>
 
@@ -30,7 +30,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="button1id"></label>
   <div class="col-md-8">
-    <button id="button1id" name="button1id" class="btn btn-success">Guardar</button>
+    <button id="button1id" name="button1id" class="btn btn-info">Guardar</button>
     <button id="button2id" name="button2id" class="btn btn-danger">Cancelar</button>
   </div>
 </div>
