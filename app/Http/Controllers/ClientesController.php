@@ -11,6 +11,7 @@ class ClientesController extends Controller
     //
     public function getAll(){
         $clientes = Clientes::all();
+
         return $clientes;
     }
 
@@ -32,12 +33,14 @@ class ClientesController extends Controller
 
     public function get($id){
         $cliente = Clientes::find($id);
+        
         return $cliente;
     }
 
     public function edit($id, Request $request){
         $cliente = $this->get($id);
         $cliente->fill($request->all())->save();
+
         return $cliente;
     }
 
