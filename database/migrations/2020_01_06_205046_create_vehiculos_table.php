@@ -22,7 +22,7 @@ class CreateVehiculosTable extends Migration
             $table->string('marca');
             $table->integer('id_estado_vehiculo');
             $table->integer('id_cliente');
-            $table->date('fecha_registro');
+            $table->timestamps();
         });
     }
 

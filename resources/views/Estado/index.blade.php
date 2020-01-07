@@ -17,6 +17,7 @@
             </div>
           </div>
           <div class="table-container">
+            <h1>{{$data}} </h1>
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
                <th>Nombre</th>
