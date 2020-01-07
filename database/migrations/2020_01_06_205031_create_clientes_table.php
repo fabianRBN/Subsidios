@@ -25,7 +25,7 @@ class CreateClientesTable extends Migration
             $table->integer('edad');
             $table->decimal('credito_actual',12,2);
             $table->decimal('credito_total',12,2);
-            $table->date('fecha_registro');
+            $table->timestamps();
         });
     }
 

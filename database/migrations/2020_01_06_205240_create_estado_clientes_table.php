@@ -15,7 +15,8 @@ class CreateEstadoClientesTable extends Migration
     {
         Schema::create('estado_clientes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('titulo');
+            $table->string('descripcion');
         });
     }
 

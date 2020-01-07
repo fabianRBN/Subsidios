@@ -15,7 +15,15 @@ class CreateTransaccionsTable extends Migration
     {
         Schema::create('transaccions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('id_cliente');
+            $table->integer('id_empleado');
+            $table->decimal('debito_dinero',12,2);
+            $table->decimal('debito_galones',12,2);
+            $table->decimal('credito_actual',12,2);
+            $table->decimal('credito_final',12,2);
             $table->timestamps();
+            $table->string('descripcion');
+            $table->string('token');
         });
     }
 

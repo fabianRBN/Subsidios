@@ -20,6 +20,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('cedula');
             $table->char('genero',2);
             $table->integer('id_sucursal');
+            $table->timestamps();
 
         });
     }
