@@ -26,6 +26,9 @@ Route::post('clientes','ClientesController@add')->name('addClientes');
 
 Route::post('clientes/{id}','ClientesController@edit')->name('editClientes');
 
+Route::get('clientefind/{id}','ClientesController@findByElement')->name('findByElementClientes');
+
+
 // Sucursales API
 
 Route::get('sucursal','SucursalController@getAll')->name('getAllSucursal');
@@ -45,3 +48,12 @@ Route::get('vehiculo/{id}','VehiculoController@get')->name('getVehiculo');
 Route::post('vehiculo','VehiculoController@add')->name('addVehiculo');
 
 Route::post('vehiculo/{id}','VehiculoController@edit')->name('editVehiculo');
+
+// Transacciones
+Route::get('transaccion','TransaccionController@getAll')->name('getAllTransaccion');
+
+Route::get('transaccion/{id}','TransaccionController@get')->name('getTransaccion');
+
+Route::post('transaccion','TransaccionController@add')->name('addTransaccion');
+
+Route::post('transaccion/{id}','TransaccionController@edit')->name('editTransaccion');
