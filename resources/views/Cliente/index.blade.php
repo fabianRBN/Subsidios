@@ -20,7 +20,9 @@
             <table id="mytable" class="table table-bordred table-striped">
              <thead>
                <th>Nombre</th>
-               <th>Cédula</th>               
+               <th>Apellido</th>
+               <th>Cédula</th>
+               <th>Estado</th>                
                <th>Editar</th>
                <th>Eliminar</th>
              </thead>
@@ -29,17 +31,9 @@
               @foreach($clientes as $cliente)
               <tr> 
               <td>{{$cliente->nombre}}</td>
+              <td>{{$cliente->apellido}}</td>
               <td>{{$cliente->cedula}}</td>
-              <!--
-              <td><a  class="btn btn-primary" href="{{action('EstadoClienteController@edit', $estado->id)}}" >Editar</a></td>
-                <td>
-                <form action="{{ route('estado.destroy', $estado->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
-                 </td>
-                 -->
+              <td>{{$cliente}}</td>
               </tr>
              @endforeach
 	    	@else

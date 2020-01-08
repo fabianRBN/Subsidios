@@ -30,6 +30,12 @@ class ClientesController extends Controller
         $estadoclientes = Estado_cliente::all();
         return view('Cliente.create',["clientes"=>$estadoclientes]);
     }
+    //guardar cliente
+    public function storeClient(Request $request){
+        $clientes = Clientes::Create($request->all());
+        $clientes = Clientes::all();
+        return redirect()->route('cliente.index',["clientes"=>$clientes]);
+    }
 
     public function get($id){
         $cliente = Clientes::find($id);
@@ -47,4 +53,5 @@ class ClientesController extends Controller
         $cliente.delete();
         return $cliente;
     }
+     
 }

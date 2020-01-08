@@ -5,10 +5,9 @@
 @section('content')
 <legend>Crear nuevo  cliente</legend>
         
-<form class="form-horizontal" method="POST" action="{{ route('cliente.store') }}">
+<form class="form-horizontal" method="POST" action="{{ route('cliente.storeClient') }}">
 {{ csrf_field() }}
 <fieldset>
-
 
 <!-- Text input-->
 <div class="form-group">
@@ -36,22 +35,25 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="descripcionEstado">Teléfono:</label>  
   <div class="col-md-5">
-  <input id="cedula" name="cedula" type="number" placeholder="Ingrese el télefono del cliente" class="form-control input-md">
+  <input id="token" name="token" type="hidden" value="000" class="form-control input-md">
+  <input id="telefono" name="telefono" type="number" placeholder="Ingrese el télefono del cliente" class="form-control input-md">
   </div>
 </div>
 <!-- Text input-->
 <div class="form-group">
 <label class="col-md-4 control-label" for="descripcionEstado">Estado:</label>
-            <select name="genero" id="genero" class="form-control input-md">
+    <div class="col-md-5">
+            <select name="id_estado_cliente" id="id_estado_cliente" class="form-control input-md">
             @if(count($clientes) > 0 )
                 <option value="">--Seleccione--</option>
                 @foreach($clientes as $estado)
-                <option value="">{{$estado->titulo}}</option>
+                <option value="{{$estado->id}}">{{$estado->titulo}}</option>
                 @endforeach
              @else
              No existe estados
              @endif   
             </select>
+    </div>
 </div>
 <!-- Text input-->
 <div class="form-group">
@@ -60,8 +62,8 @@
         <label class="col-md-2 control-label" for="descripcionEstado">Género:</label>
             <select name="genero" id="genero">
                 <option value="">--Seleccione--</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Masculino">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
             </select>
         
         <label class="col-md-2 control-label" for="descripcionEstado">Edad:</label>
@@ -74,10 +76,10 @@
     <div class="row">
         <div class="col-md-6">
         <label class="col-md-2 control-label" for="descripcionEstado">Crédito actual:</label>
-        <input id="edad" name="edad" type="number" value="30" placeholder="30" style="width:130px" >
+        <input id="credito_actual" name="credito_actual" type="number" value="30" placeholder="30" style="width:130px" >
         
         <label class="col-md-2 control-label" for="descripcionEstado">Crédito total:</label>
-        <input id="edad" name="edad" type="number" placeholder="Crédito total" style="width:130px" >
+        <input id="credito_total" name="credito_total" type="number" placeholder="Crédito total" style="width:130px" >
         </div>
     </div>
 </div>

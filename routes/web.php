@@ -25,4 +25,4 @@ Route::delete('destroy/{id}', 'EstadoClienteController@destroy')->name('estado.d
 //routes Cliente
 Route::get('/cliente', 'ClientesController@index')->name('cliente.index');
 Route::get('/createClient', 'ClientesController@createClientView')->name('cliente.create');
-Route::post('storeClient', 'ClientesController@store')->name('cliente.store');
+Route::post('storeClient', 'ClientesController@storeClient')->name('cliente.storeClient');
