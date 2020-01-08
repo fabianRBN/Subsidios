@@ -54,11 +54,11 @@
               <li><a href="{{ action('ClientesController@index')}}">Clientes</a></li>
             </ul>
           </li>       
-          <li class="menu-has-children"><a href="">Vehículos</a>
+          <li class="menu-has-children"><a href="#">Vehículos</a>
             <ul>
-              <li><a href="#">Catálogo de Estados </a></li>
-              <li><a href="#">Tipos</a></li>
-              <li><a href="#">Vehículos</a></li>
+              <li><a href="{{ action('VehiculoController@index')}}">Catálogo de Estados </a></li>
+              <li><a href="{{action('VehiculoController@indexTipo')}}">Tipos</a></li>
+              <li><a href="{{action('VehiculoController@indexVehiculo')}}">Vehículos</a></li>
             </ul>
           </li>
           <li><a href="#contact">Sucursal</a></li>

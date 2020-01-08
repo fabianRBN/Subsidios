@@ -34,6 +34,15 @@
               <td>{{$cliente->apellido}}</td>
               <td>{{$cliente->cedula}}</td>
               <td>{{$cliente->id_estado_cliente}}</td>
+              <td><a  class="btn btn-primary" href="{{action('ClientesController@editClient', $cliente->id)}}" >Editar</a>
+              </td>
+                <td>
+                  <form action="{{ route('cliente.destroyClient', $cliente->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
+                </td>
               </tr>
              @endforeach
 	    	@else

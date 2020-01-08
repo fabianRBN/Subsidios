@@ -17,6 +17,7 @@ class CreateTipoVehiculosTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descripcion');
+            $table->timestamps();
         });
     }
 

@@ -3,7 +3,7 @@
 @section('title', 'Nuevo Estado Cliente')
 
 @section('content')
-<legend>Crear nuevo estados de cliente</legend>
+<legend>Crear nuevo estado de cliente</legend>
         
 <form class="form-horizontal" method="POST" action="{{ route('estado.store') }}">
 {{ csrf_field() }}
@@ -32,7 +32,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="button1id"></label>
   <div class="col-md-8">
-    <button id="button1id" name="button1id" class="btn btn-success">Guardar</button>
+    <button id="button1id" name="button1id" class="btn btn-info">Guardar</button>
     <button id="button2id" name="button2id" class="btn btn-danger">Cancelar</button>
   </div>
 </div>

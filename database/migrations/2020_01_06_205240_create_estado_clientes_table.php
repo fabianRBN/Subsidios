@@ -17,8 +17,7 @@ class CreateEstadoClientesTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descripcion');
-            $table->date('updated_at');
-            $table->date('created_at');
+            $table->timestamps();
         });
     }
 

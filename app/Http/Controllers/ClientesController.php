@@ -27,6 +27,7 @@ class ClientesController extends Controller
         $clientes = Clientes::all();
         foreach ($clientes as $cliente){
             $estado = Estado_cliente::find($cliente->id_estado_cliente);
+            $estado1 = Clientes::find($cliente->id_estado_cliente);
             $cliente->id_estado_cliente = $estado->titulo;
         }
         return view('Cliente.index',["clientes"=>$clientes]);
@@ -49,18 +50,27 @@ class ClientesController extends Controller
 
         return $cliente;
     }
-
-    public function edit($id, Request $request){
+    //editar cliente
+    public function editClient($id)
+    {
+        $clientes=Clientes::find($id);
+        $clientes1=$clientes->id_estado_cliente;
+        $estadoclientes = Estado_cliente::all();
+        $estado=Estado_cliente::find($clientes->id_estado_cliente);
+        $clientes->id_estado_cliente=$estado->titulo;
+        return view('Cliente.edit',["clientes"=>$clientes,"estados"=>$estadoclientes,"clientes1"=>$clientes1]);
+    }
+    //actualizar
+    public function updateClient($id, Request $request){
         $cliente = $this->get($id);
         $cliente->fill($request->all())->save();
-
-        return $cliente;
+        $clientes = Estado_cliente::all();
+        return redirect()->route('cliente.index',["clientes"=>$clientes]);
     }
 
-    public function delete($id){
-        $cliente = $this->get($id);
-        $cliente.delete();
-        return $cliente;
+    public function destroyClient($id){
+        Clientes::find($id)->delete();
+        return redirect()->route('cliente.index');
     }
 
     public function findByElement($key){

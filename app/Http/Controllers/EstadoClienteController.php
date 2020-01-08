@@ -36,7 +36,7 @@ class EstadoClienteController extends Controller
         return view('Estado.edit',["estados"=>$estados]);
     }
 
-   
+   //
     public function edit($id)
     {
         $estados=Estado_cliente::find($id);
