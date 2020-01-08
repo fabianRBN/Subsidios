@@ -10,6 +10,7 @@ use App\Estado_cliente;
 
 class ClientesController extends Controller
 {
+
     //
     public function getAll(){
         $clientes = Clientes::all();
@@ -91,5 +92,24 @@ class ClientesController extends Controller
 
         }
 
+    }
+
+    public function calculoTransaccion(Request $request){
+        $galones = $request->input('galones');
+        $dinero = $request->input('dinero');
+        $precio_galon = 1.85;
+        $costo = 0;
+        if($galones){
+
+           $costo = $galones * $precio_galon;
+
+           return ['galones'=>$galones,'costo'=>$costo];
+
+        }else if($dinero){
+            $galones = $dinero / $precio_galon;
+            return ['galones'=>$galones,'costo'=>$dinero];
+        }
+
+        return ['galones'=>$galones,'dinero'=>$dinero, 'mensaje'=> 'Datos incorrectos'];
     }
 }

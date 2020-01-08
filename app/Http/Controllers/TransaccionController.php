@@ -35,11 +35,7 @@ class TransaccionController extends Controller
         return $transaccion;
     }
 
-    // Find by Element
-    public function  findByElement($key){
-        $transaccion = Transaccion::where('cedula','=',$key)->firstOrFail();
-        return $transaccion;
-    }
+
 
 
 }
