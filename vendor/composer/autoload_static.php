@@ -407,7 +407,7 @@ class ComposerStaticInit380c398a954d819e0034fa0cb16a16a6
     );
 
     public static $classMap = array (
-        'App\\Cliente' => __DIR__ . '/../..' . '/app/Cliente.php',
+        'App\\Clientes' => __DIR__ . '/../..' . '/app/Clientes.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Empleado' => __DIR__ . '/../..' . '/app/Empleado.php',
         'App\\Estado_Vehiculo' => __DIR__ . '/../..' . '/app/Estado_Vehiculo.php',
@@ -419,7 +419,13 @@ class ComposerStaticInit380c398a954d819e0034fa0cb16a16a6
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\ClientesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\EmpleadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmpleadoController.php',
+        'App\\Http\\Controllers\\EstadoClienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/EstadoClienteController.php',
+        'App\\Http\\Controllers\\SucursalController' => __DIR__ . '/../..' . '/app/Http/Controllers/SucursalController.php',
+        'App\\Http\\Controllers\\TransaccionController' => __DIR__ . '/../..' . '/app/Http/Controllers/TransaccionController.php',
+        'App\\Http\\Controllers\\VehiculoController' => __DIR__ . '/../..' . '/app/Http/Controllers/VehiculoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',

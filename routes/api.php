@@ -28,6 +28,10 @@ Route::post('clientes/{id}','ClientesController@edit')->name('editClientes');
 
 Route::get('clientefind/{id}','ClientesController@findByElement')->name('findByElementClientes');
 
+Route::get('clientefind','ClientesController@calculoTransaccion')->name('calculoTransaccionClientes');
+
+
+
 
 // Sucursales API
 
