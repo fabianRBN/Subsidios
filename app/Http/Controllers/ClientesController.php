@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Clientes;
 use App\Estado_cliente;
 
+
 class ClientesController extends Controller
 {
     //
@@ -24,6 +25,10 @@ class ClientesController extends Controller
     public function index()
     {
         $clientes = Clientes::all();
+        foreach ($clientes as $cliente){
+            $estado = Estado_cliente::find($cliente->id_estado_cliente);
+            $cliente->id_estado_cliente = $estado->titulo;
+        }
         return view('Cliente.index',["clientes"=>$clientes]);
     }
     //vista crear Cliente
